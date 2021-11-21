@@ -32,7 +32,14 @@ public class AlternativeTest {
     public void testLoginError() {
         driver.get("https://www.browserstack.com/users/sign_in");
 
-        WebElement username = driver.findElement(By.id("user_email_login"));
+        //WebElement username = driver.findElement(By.id("user_email_login"));
+
+        //XPath demonstartion
+        WebElement username = driver.findElement(
+                By.xpath("//input[@id='user_email_login']")
+                //"//[@class='input-wrapper']/input[@id='user_email_login']"
+        );
+
         WebElement password = driver.findElement(By.id("user_password"));
         WebElement login = driver.findElement(By.name("commit"));
 
